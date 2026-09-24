@@ -3,10 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>heatmap</title>
-    <script type="module" crossorigin src="/assets/index-Clw7DK3a.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-Gsguc6aB.css">
   </head>
   <body>
     <fieldset>
@@ -17,22 +18,26 @@
       <label for="gradientStrength">Brush Strength</label>
       <input type="number" id="gradientStrength" name="gradientStrength" value="30" min="1" max="255" step="1">
     </fieldset>
-    <select name="playtest" id="playtest">
-      <option value="firstPlaytest">first</option>
-      <option value="secondPlaytest">second</option>
-      <option value="thirdPlaytest">third</option>
-    </select>
+    <fieldset>
+      <label for="playtest">Playtest</label>
+      <select name="playtest" id="playtest">
+        <option value="firstPlaytest">first</option>
+        <option value="secondPlaytest">second</option>
+        <option value="thirdPlaytest">third</option>
+      </select>
+    </fieldset>
 
     <fieldset>
-      <label for="grayscale">grayscale</label>
+      <label for="grayscale">Grayscale</label>
       <input type="checkbox" name="grayscale" id="grayscale">
     </fieldset>
 
     <fieldset>
-      <label for="animate">animate</label>
+      <label for="animate">Animate</label>
       <input type="checkbox" name="animate" id="animate">
     </fieldset>
 
+    <script type="module" src="/src/main.js"></script>
 
     <div class="canvas-container" id="canvasContainer"></div>
     <div id="time"></div>

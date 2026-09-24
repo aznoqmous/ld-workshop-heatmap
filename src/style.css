@@ -1,0 +1,46 @@
+body {
+  padding: 0.6rem 0;
+  width: 70vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  gap: 0.5rem;
+
+  .canvas-container {
+    position: relative;
+    transform: scale(-1);
+
+    &.grayscale {
+      &:before {
+        filter: grayscale(1);
+      }
+      canvas{
+        &:first-child {
+          opacity: 1;
+        }
+        &.canvas-overlay {
+          opacity: 0;
+        }
+      }
+    }
+    canvas {
+      &:first-child {
+        opacity: 0;
+      }
+      &.canvas-overlay {
+        position: absolute;
+        inset: 0;
+      }
+    }
+    
+    &:before {
+      content:"";
+      position: absolute;
+      inset: 0;
+      background-image: url("../map.png");
+      background-position: 30px -5px;
+      background-size: contain;
+      z-index: -1;
+    }
+  }
+}
